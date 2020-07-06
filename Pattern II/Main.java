@@ -1,0 +1,33 @@
+#include<iostream>
+int main()
+{
+  int n,i,j,m=1,t;
+  std::cin>>n;
+  for(i=1;i<=n;i++)
+  {
+    if(i%2!=0)
+    {
+      std::cout<<m;
+      m+=1;
+      for(j=1;j<i;j++)
+      {
+        std::cout<<'*'<<m;
+        m+=1;
+      }
+      std::cout<<'\n';
+    }
+    else
+    {
+      t=m+i-1;
+      std::cout<<t;
+      t-=1;
+      for(j=1;j<i;j++)
+      {
+        std::cout<<'*'<<t;
+        t-=1;
+      }
+      std::cout<<'\n';
+      m+=i;
+    }
+  }
+ }

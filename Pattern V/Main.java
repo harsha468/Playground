@@ -1,0 +1,35 @@
+#include<iostream>
+int main()
+{
+  int n,i,j,t,s=0,z,m=1;
+  std::cin>>n;
+  z=n;
+  while(z>0)
+  {
+    s=s+z;
+    z-=1;
+  }
+  s=s*2;
+  for(i=n;i>0;i--)
+  {
+    for(j=0;j<(n-i)*2;j++)
+    {
+      std::cout<<'-';
+    }
+    std::cout<<m;
+    m+=1;
+    for(j=1;j<i;j++)
+    {
+        std::cout<<'*'<<m;
+        m+=1;
+    }
+    t=s-i+1;
+    for(j=1;j<=i;j++)
+    {
+      std::cout<<"*"<<t;
+      t+=1;
+    }
+    s=t-i-1;
+    std::cout<<'\n';
+  }
+}
